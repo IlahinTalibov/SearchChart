@@ -1,6 +1,6 @@
 
 // import React, { useState } from 'react';
-import { Eye, EyeOff, Search } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import type { InputFieldProps } from '../types';
 
 

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 
 import './App.css'
 import AuthPage from './pages/AuthPage'
@@ -7,7 +7,7 @@ import { ThemeProvider } from './context/ThemeContext';
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>

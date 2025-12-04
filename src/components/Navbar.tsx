@@ -2,7 +2,7 @@ import { Search, Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 
-export const Navbar: React.FC<{ isLogin: boolean }> = ({ isLogin }) => {
+export const Navbar: React.FC<{ isLogin: boolean }> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
