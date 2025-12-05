@@ -58,7 +58,7 @@ body[data-theme="dark"]::before {
 }
 
 body[data-theme="light"]::before {
-  filter: brightness(2.4);
+  filter: brightness(5.5);
 }
 
 h1 {

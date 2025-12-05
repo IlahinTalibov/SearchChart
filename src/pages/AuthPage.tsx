@@ -125,6 +125,8 @@ export default function AuthPage() {
   };
 
   return (
+    <>
+     <Navbar isLogin={isLogin} />
     <div className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-10"
@@ -133,7 +135,7 @@ export default function AuthPage() {
             'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
         }}
       />
-      <Navbar isLogin={isLogin} />
+     
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className={`space-y-6 px-4 hidden lg:block ${theme === 'light' ? 'text-gray-900' : 'text-white'}`}>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight" style={{ textAlign: 'left' }}>
@@ -147,9 +149,7 @@ export default function AuthPage() {
               : "Join our data-driven community! Sign up today to explore a world of valuable insights, enabling you to navigate trends and shape your strategies with confidence."}
           </p>
         </div>
-
-        <div className="flex justify-center lg:justify-end px-4">
-          <div className="relative w-full">
+       
             <div
               className={`transition-all duration-500 ease-in-out ${
                 isFlipping 
@@ -189,9 +189,8 @@ export default function AuthPage() {
                 />
               )}
             </div>
-          </div>
-        </div>
       </div>
     </div>
+    </>
   );
 }

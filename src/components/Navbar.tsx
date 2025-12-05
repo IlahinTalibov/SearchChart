@@ -7,7 +7,7 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <nav className="absolute top-0 left-0 right-0 flex justify-between items-center px-8 py-6 z-10">
+    <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 z-10">
       <div className="flex items-center gap-2">
         <Search className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4 text-red-500" />
         <span className="text-white text-xl max-[400px]:text-base">SEARCHART</span>
@@ -50,7 +50,7 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         </button>
         
         <button 
-          className="text-white"
+          className="text-black"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4" /> : <Menu className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4" />}
