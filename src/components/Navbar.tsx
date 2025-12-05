@@ -22,8 +22,9 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         
         <button 
           onClick={toggleTheme}
-          className="text-yellow-400 hover:text-yellow-300 transition-colors"
+          className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent"
           aria-label="Toggle theme"
+          style={{ background: 'transparent' }}
         >
           {theme === 'dark' ?  <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
         </button>
@@ -43,8 +44,9 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
       <div className="lg:hidden flex items-center gap-3">
         <button 
           onClick={toggleTheme}
-          className="text-yellow-400 hover:text-yellow-300 transition-colors"
+          className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent"
           aria-label="Toggle theme"
+          style={{ background: 'transparent' }}
         >
           {theme === 'dark' ? <Sun className="w-5 h-5 max-[400px]:w-3.5 max-[400px]:h-3.5" /> : <Moon className="w-5 h-5 max-[400px]:w-3.5 max-[400px]:h-3.5" />}
         </button>
@@ -69,6 +71,15 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
       <div className={`fixed top-0 right-0 h-full w-64 bg-slate-900 shadow-xl lg:hidden z-50 transform transition-transform duration-300 ease-in-out ${
         isMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
+        {/* Close Button */}
+        <button 
+          className="absolute top-6 right-6 text-white"
+          onClick={() => setIsMenuOpen(false)}
+          style={{ background: 'transparent' }}
+        >
+          <X className="w-6 h-6" />
+        </button>
+
         <div className="flex flex-col h-full pt-20">
           {/* Menu Items */}
           <div className="flex flex-col gap-8 px-8 py-6">

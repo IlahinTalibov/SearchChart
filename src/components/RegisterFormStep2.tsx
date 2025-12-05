@@ -92,7 +92,8 @@ export const RegisterFormStep2: React.FC<RegisterFormStep2Props> = ({
             <button
               type="button"
               onClick={onTogglePassword}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+              style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}
             >
               {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
             </button>
