@@ -216,7 +216,7 @@ const RegisterForm: React.FC<{
 }) => {
   return (
     <div className="bg-white rounded-lg p-14 shadow-xl w-full max-w-[750px] mx-auto">
-      <div className="flex flex-col items-center mb-10">
+      <div className="flex flex-col items-center mb-4">
         <h2 className="text-2xl font-medium text-gray-900">Registration</h2>
       </div>
 
