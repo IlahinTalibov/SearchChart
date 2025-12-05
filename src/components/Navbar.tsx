@@ -10,15 +10,15 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
     <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 z-10">
       <div className="flex items-center gap-2">
         <Search className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4 text-red-500" />
-        <span className="text-white text-xl max-[400px]:text-base">SEARCHART</span>
+        <span className="text-xl max-[400px]:text-base font-bold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>SEARCHART</span>
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex items-center gap-6">
-        <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Policy area</a>
-        <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Dashboard</a>
-        <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Subscription</a>
-        <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>About Us</a>
+        <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Policy area</a>
+        <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Dashboard</a>
+        <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Subscription</a>
+        <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>About Us</a>
         
         <button 
           onClick={toggleTheme}
@@ -32,10 +32,10 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
       {/* Sign in/up Buttons - Always visible on desktop */}
       <div className="hidden lg:flex gap-3">
-        <button className="px-6 py-2 text-white border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
+        <button className="px-6 py-2 font-semibold border rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)'}}>
           Sign in
         </button>
-        <button className="px-6 py-2 text-white border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
+        <button className="px-6 py-2 font-semibold border rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)'}}>
           Sign up
         </button>
       </div>
@@ -52,8 +52,8 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         </button>
         
         <button 
-          className="text-black"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}
         >
           {isMenuOpen ? <X className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4" /> : <Menu className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4" />}
         </button>
@@ -83,17 +83,17 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         <div className="flex flex-col h-full pt-20">
           {/* Menu Items */}
           <div className="flex flex-col gap-8 px-8 py-6">
-            <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Policy area</a>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Dashboard</a>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>Subscription</a>
-            <a href="#" className="text-white hover:text-gray-300 transition-colors text-sm" style={{ color: "#FFFFFF" }}>About Us</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold" style={{ color: "#FFFFFF" }}>Policy area</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold" style={{ color: "#FFFFFF" }}>Dashboard</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold" style={{ color: "#FFFFFF" }}>Subscription</a>
+            <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold" style={{ color: "#FFFFFF" }}>About Us</a>
             
             {/* Buttons */}
             <div className="flex flex-col gap-3 mt-4">
-              <button className="px-6 py-2 text-white border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
+              <button className="px-6 py-2 text-white font-semibold border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
                 Sign in
               </button>
-              <button className="px-6 py-2 text-white border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
+              <button className="px-6 py-2 text-white font-semibold border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
                 Sign up
               </button>
             </div>
