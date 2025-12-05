@@ -1,26 +1,14 @@
-
-
 export interface FormErrors {
   [key: string]: string;
 }
 
-export interface InputFieldProps {
-  label: string;
-  type: string;
-  value: string;
-  onChange: (value: string) => void;
-  error?: string;
-  placeholder?: string;
-  showPasswordToggle?: boolean;
-  onTogglePassword?: () => void;
-  showPassword?: boolean;
-}
-
+// Login Form Types
 export interface LoginFormData {
   email: string;
   password: string;
 }
 
+// Register Form Types (Step 1)
 export interface RegisterFormData {
   firstName: string;
   lastName: string;
@@ -28,4 +16,11 @@ export interface RegisterFormData {
   phoneNumber: string;
   company: string;
   industry: string;
+}
+
+// Register Form Types (Step 2)
+export interface RegisterStep2FormData {
+  jobTitle: string;
+  email: string;
+  password: string;
 }
