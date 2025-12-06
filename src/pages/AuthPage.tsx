@@ -127,7 +127,7 @@ export default function AuthPage() {
   return (
     <>
      <Navbar isLogin={isLogin} />
-    <div className="min-h-screen flex items-center justify-center p-4 relative" style={{ isolation: 'isolate' }}>
+    <div className="h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ isolation: 'isolate' }}>
       <div
         className="absolute inset-0 opacity-10"
         style={{

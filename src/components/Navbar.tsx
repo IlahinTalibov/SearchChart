@@ -93,21 +93,17 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
             <div className="flex flex-col h-full pt-20">
               {/* Menu Items */}
-              <div className="flex flex-col gap-8 px-8 py-6">
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold">Policy area</a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold">Dashboard</a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold">Subscription</a>
-                <a href="#" className="text-white hover:text-gray-300 transition-colors font-semibold">About Us</a>
-                
-                {/* Buttons */}
-                <div className="flex flex-col gap-3 mt-4">
-                  <button className="px-6 py-2 text-white font-semibold border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
-                    Sign in
-                  </button>
-                  <button className="px-6 py-2 text-white font-semibold border border-white/30 rounded-md hover:border-white/50 active:bg-black transition-all text-sm" style={{background: 'initial'}}>
-                    Sign up
-                  </button>
-                </div>
+              <div className="flex flex-col gap-6 px-8 py-6">
+                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Policy area</a>
+                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Dashboard</a>
+                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Subscription</a>
+                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>About Us</a>
+                <button className="py-2 font-semibold border border-white/30 rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
+                  Sign in
+                </button>
+                <button className="py-2 font-semibold border border-white/30 rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
+                  Sign up
+                </button>
               </div>
             </div>
           </div>
