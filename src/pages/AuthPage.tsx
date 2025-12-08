@@ -16,6 +16,8 @@ export default function AuthPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [registerStep, setRegisterStep] = useState(1);
   const [slideDirection, setSlideDirection] = useState<'left' | 'right'>('right');
+  
+  console.log(slideDirection)
 
   const [loginData, setLoginData] = useState<LoginFormData>({
     email: '',
