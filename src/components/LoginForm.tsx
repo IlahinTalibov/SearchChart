@@ -1,4 +1,4 @@
-import { Search, Eye, EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import type { FormErrors, LoginFormData } from "../types";
 
 
