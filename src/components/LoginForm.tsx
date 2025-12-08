@@ -25,7 +25,8 @@ export const LoginForm: React.FC<LoginFormProps> = ({
     <div className="bg-white rounded-lg p-10 shadow-xl w-full mx-auto" style={{ maxWidth: '420px' }}>
       <div className="flex flex-col items-center mb-8">
         <div className="bg-slate-900 rounded-full flex items-center justify-center mb-3" style={{ width: '56px', height: '56px' }}>
-          <Search style={{ width: '28px', height: '28px' }} className="text-red-500" />
+          {/* <Search style={{ width: '28px', height: '28px' }} className="text-red-500" /> */}
+           <img src="/public/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />;
         </div>
         <h2 className="text-base font-normal text-gray-800">Welcome Searchart !</h2>
       </div>

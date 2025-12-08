@@ -88,7 +88,7 @@ export default function AuthPage() {
     setRegisterErrors(errors);
 
     if (Object.keys(errors).length === 0) {
-      setSlideDirection('left');
+      setSlideDirection('right');
       setIsFlipping(true);
       setTimeout(() => {
         setRegisterStep(2);
@@ -154,9 +154,7 @@ export default function AuthPage() {
             <div
               className={`transition-all duration-500 ease-in-out ${
                 isFlipping 
-                  ? slideDirection === 'left' 
-                    ? '-translate-x-full opacity-0' 
-                    : 'translate-x-full opacity-0'
+                  ? 'translate-x-full opacity-0'
                   : 'translate-x-0 opacity-100'
               }`}
             >

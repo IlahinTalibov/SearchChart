@@ -1,4 +1,4 @@
-import { Search, Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { useTheme } from "../context/ThemeContext";
@@ -11,7 +11,9 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
     <>
       <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 relative z-50">
         <div className="flex items-center gap-2">
-          <Search className="w-6 h-6 max-[400px]:w-4 max-[400px]:h-4 text-red-500" />
+         
+          <img src="/public/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />;
+
           <span className="text-xl max-[400px]:text-base font-bold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>SEARCHART</span>
         </div>
 
@@ -24,9 +26,9 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
           
           <button 
             onClick={toggleTheme}
-            className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent"
+            className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent border rounded-md p-2"
             aria-label="Toggle theme"
-            style={{ background: 'transparent' }}
+            style={{ background: 'transparent', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)' }}
           >
             {theme === 'dark' ?  <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
           </button>
@@ -34,10 +36,10 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
         {/* Sign in/up Buttons - Always visible on desktop */}
         <div className="hidden lg:flex gap-3">
-          <button className="px-6 py-2 font-semibold border rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)'}}>
+          <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
             Sign in
           </button>
-          <button className="px-6 py-2 font-semibold border rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)'}}>
+          <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
             Sign up
           </button>
         </div>
@@ -46,9 +48,9 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         <div className="lg:hidden flex items-center gap-3">
           <button 
             onClick={toggleTheme}
-            className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent"
+            className="text-yellow-400 hover:text-yellow-300 transition-colors bg-transparent border rounded-md p-2"
             aria-label="Toggle theme"
-            style={{ background: 'transparent' }}
+            style={{ background: 'transparent', borderColor: theme === 'light' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)' }}
           >
             {theme === 'dark' ? <Sun className="w-5 h-5 max-[400px]:w-3.5 max-[400px]:h-3.5" /> : <Moon className="w-5 h-5 max-[400px]:w-3.5 max-[400px]:h-3.5" />}
           </button>
@@ -98,10 +100,10 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
                 <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Dashboard</a>
                 <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Subscription</a>
                 <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>About Us</a>
-                <button className="py-2 font-semibold border border-white/30 rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
+                <button className="py-2 font-semibold rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
                   Sign in
                 </button>
-                <button className="py-2 font-semibold border border-white/30 rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
+                <button className="py-2 font-semibold rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
                   Sign up
                 </button>
               </div>

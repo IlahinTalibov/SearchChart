@@ -25,7 +25,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
       <div className="space-y-6">
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <label className="block text-xs font-normal text-gray-700 mb-2" style={{ 
+            <label className="block text-xs font-normal text-gray-700 mb-2 text-left" style={{ 
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: '16px',
               lineHeight: '100%',
@@ -45,7 +45,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
             {errors.firstName && <p className="mt-1 text-xs text-red-500">{errors.firstName}</p>}
           </div>
           <div>
-            <label className="block text-xs font-normal text-gray-700 mb-2" style={{ 
+            <label className="block text-xs font-normal text-gray-700 mb-2 text-left" style={{ 
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: '16px',
               lineHeight: '100%',
@@ -67,7 +67,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
         </div>
 
         <div>
-          <label className="block text-xs font-normal text-gray-700 mb-2" style={{ 
+          <label className="block text-xs font-normal text-gray-700 mb-2 text-left" style={{ 
             fontFamily: 'Inter, system-ui, sans-serif',
             fontSize: '16px',
             lineHeight: '100%',
@@ -90,7 +90,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
         <div>
           <div className="flex gap-4">
             <div className="space-y-2" style={{ width: '170px' }}>
-              <label className="block text-base font-normal text-[#515151]" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+              <label className="block text-base font-normal text-[#515151]  text-left" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
                 Phone Number
               </label>
               <button className="w-full flex items-center justify-center gap-2 px-4 py-3 border border-gray-300 rounded bg-white hover:bg-gray-50 transition-colors">
@@ -119,7 +119,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
 
         <div className="grid grid-cols-2 gap-6">
           <div>
-            <label className="block text-xs font-normal text-gray-700 mb-2" style={{ 
+            <label className="block text-xs font-normal text-gray-700 mb-2 text-left" style={{ 
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: '16px',
               lineHeight: '100%',
@@ -139,7 +139,7 @@ export const RegisterForm: React.FC<RegisterFormProps> = ({
             {errors.company && <p className="mt-1 text-xs text-red-500">{errors.company}</p>}
           </div>
           <div>
-            <label className="block text-xs font-normal text-gray-700 mb-2" style={{ 
+            <label className="block text-xs font-normal text-gray-700 mb-2 text-left" style={{ 
               fontFamily: 'Inter, system-ui, sans-serif',
               fontSize: '16px',
               lineHeight: '100%',
