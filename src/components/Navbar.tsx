@@ -12,7 +12,7 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
       <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 relative z-50">
         <div className="flex items-center gap-2">
          
-          <img src="/public/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />;
+          <img src="/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />;
 
           <span className="text-xl max-[400px]:text-base font-bold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>SEARCHART</span>
         </div>
