@@ -9,7 +9,7 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
   return (
     <>
-      <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 relative z-50">
+      <nav className="top-0 left-0 right-0 flex justify-between items-center px-8 py-6 sticky z-50">
         <div className="flex items-center gap-2">
          
           <img src="/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />

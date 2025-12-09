@@ -25,7 +25,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  /* color: #646cff; */
   text-decoration: inherit;
 }
 a:hover {
@@ -93,7 +93,7 @@ body[data-theme="dark"]::after {
 
 /* Ensure navbar stays on top */
 nav {
-  position: relative;
+  position: sticky;
   z-index: 10;
 }
 
