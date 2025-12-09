@@ -1,15 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Moon, ChevronDown, Menu, X, ArrowUp, ArrowRight, ArrowLeft } from 'lucide-react';
+import  { useState, useEffect, useRef } from 'react';
+import {ChevronDown, ArrowRight, ArrowLeft } from 'lucide-react';
 import Footer from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 
 const SearchArtLanding = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [visibleSectors, setVisibleSectors] = useState(false);
   const [visibleCarousel, setVisibleCarousel] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  
+
+  console.log(setIsLogin)
   
   const sectorsRef = useRef(null);
   const carouselRef = useRef(null);
