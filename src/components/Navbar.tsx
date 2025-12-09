@@ -14,7 +14,10 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
          
           <img src="/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />
 
-          <span className="text-xl max-[400px]:text-base font-bold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>SEARCHART</span>
+       
+          <a href="/landing" className="text-xl max-[400px]:text-base font-bold hover:opacity-80 transition-opacity" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>
+            SEARCHART
+          </a>
         </div>
 
         {/* Desktop Menu */}
@@ -35,14 +38,18 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
         </div>
 
         {/* Sign in/up Buttons - Always visible on desktop */}
-        <div className="hidden lg:flex gap-3">
-          <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
-            Sign in
-          </button>
-          <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
-            Sign up
-          </button>
-        </div>
+   <div className="hidden lg:flex gap-3">
+  <a href="/landing">
+    <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
+      Sign in
+    </button>
+  </a>
+  <a href="/signup">
+    <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
+      Sign up
+    </button>
+  </a>
+</div>
 
         {/* Mobile Menu Button */}
         <div className="lg:hidden flex items-center gap-3">

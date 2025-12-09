@@ -79,7 +79,7 @@ const SearchArtLanding = () => {
   return (
     <div className="bg-[#0a1628] text-white">
       {/* Sticky Navbar Container */}
-      <div className="sticky top-0 z-50 bg-black shadow-md">
+      <div className="sticky top-0 z-50 bg-[#0a1628] shadow-md">
         <Navbar isLogin={isLogin} />
       </div>
 

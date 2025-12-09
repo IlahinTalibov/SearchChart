@@ -128,7 +128,9 @@ export default function AuthPage() {
 
   return (
     <>
-     <Navbar isLogin={isLogin} />
+    <div style={{ position: 'relative' }}>
+  <Navbar isLogin={isLogin} />
+</div>
     <div className="h-screen flex items-center justify-center p-4 relative overflow-hidden" style={{ isolation: 'isolate' }}>
       <div
         className="absolute inset-0 opacity-10"
