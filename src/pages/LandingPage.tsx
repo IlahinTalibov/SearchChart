@@ -100,34 +100,17 @@ const SearchArtLanding = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="min-h-screen relative overflow-hidden">
-        {/* World Map Background */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-            <g fill="currentColor">
-              <path d="M150,200 L180,190 L200,210 L190,230 L160,225 Z" />
-              <path d="M250,150 L300,140 L320,170 L310,200 L270,190 Z" />
-              <path d="M400,180 L450,175 L480,200 L470,230 L420,220 Z" />
-              <path d="M550,160 L600,155 L630,185 L620,210 L570,200 Z" />
-              <path d="M700,190 L750,185 L780,210 L770,240 L720,230 Z" />
-              <path d="M200,350 L250,340 L270,370 L260,400 L220,390 Z" />
-              <path d="M350,320 L400,315 L430,345 L420,375 L370,365 Z" />
-              <path d="M500,340 L550,335 L580,365 L570,395 L520,385 Z" />
-              <path d="M300,500 L350,490 L370,520 L360,550 L320,540 Z" />
-              <path d="M450,480 L500,475 L530,505 L520,535 L470,525 Z" />
-              <ellipse cx="850" cy="450" rx="80" ry="100" />
-              <circle cx="950" cy="550" r="40" />
-            </g>
-          </svg>
-        </div>
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20"        style={{
+      <div className="min-h-screen relative overflow-hidden"    style={{
           backgroundImage: `url('MapSearchart.png')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          backgroundAttachment: 'fixed',
+        
         }}>
+        {/* World Map Background */}
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-20"       
+    >
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 lg:mb-12">
             Welcome to <span className="text-orange-500">SEARCHART</span>!
           </h1>
