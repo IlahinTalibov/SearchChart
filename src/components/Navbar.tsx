@@ -1,6 +1,7 @@
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { createPortal } from "react-dom";
+import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
 export const Navbar: React.FC<{ isLogin: boolean }> = () => {
@@ -15,17 +16,17 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
           <img src="/Frame7.png" alt="Description"   style={{ width: '50px', height: '50px' }} />
 
        
-          <a href="/landing" className="text-xl max-[400px]:text-base font-bold hover:opacity-80 transition-opacity" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>
+          <Link to="/landing" className="text-xl max-[400px]:text-base font-bold hover:opacity-80 transition-opacity" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF', textShadow: theme === 'light' ? '0 1px 2px rgba(0,0,0,0.1)' : 'none' }}>
             SEARCHART
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-6">
-          <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Policy area</a>
-          <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Dashboard</a>
-          <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Subscription</a>
-          <a href="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>About Us</a>
+          <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Policy area</Link>
+          <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Dashboard</Link>
+          <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Subscription</Link>
+          <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>About Us</Link>
           
           <button 
             onClick={toggleTheme}
@@ -39,16 +40,16 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
         {/* Sign in/up Buttons - Always visible on desktop */}
    <div className="hidden lg:flex gap-3">
-  <a href="/landing">
+  <Link to="/landing">
     <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
       Sign in
     </button>
-  </a>
-  <a href="/signup">
+  </Link>
+  <Link to="/signup">
     <button className="px-6 py-2 font-semibold rounded-md hover:opacity-80 active:opacity-60 transition-all text-sm" style={{background: 'initial', color: theme === 'light' ? '#000000' : '#FFFFFF'}}>
       Sign up
     </button>
-  </a>
+  </Link>
 </div>
 
         {/* Mobile Menu Button */}
@@ -103,10 +104,10 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
             <div className="flex flex-col h-full pt-20">
               {/* Menu Items */}
               <div className="flex flex-col gap-6 px-8 py-6">
-                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Policy area</a>
-                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Dashboard</a>
-                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Subscription</a>
-                <a href="#" className="font-semibold" style={{ color: '#FFFFFF' }}>About Us</a>
+                <Link to="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Policy area</Link>
+                <Link to="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Dashboard</Link>
+                <Link to="#" className="font-semibold" style={{ color: '#FFFFFF' }}>Subscription</Link>
+                <Link to="#" className="font-semibold" style={{ color: '#FFFFFF' }}>About Us</Link>
                 <button className="py-2 font-semibold rounded-md text-sm w-fit" style={{background: 'initial', color: '#FFFFFF', paddingLeft: 0, paddingRight: '1.5rem'}}>
                   Sign in
                 </button>
