@@ -373,70 +373,101 @@ const SearchArtLanding = () => {
 
       {/* Dashboard Carousel Section */}
       {/* Carousel Content */}
-      <div ref={carouselRef} className={`relative min-h-[600px] flex items-center overflow-hidden transform transition-all duration-1000 ease-out ${visibleCarousel ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        {/* Left Arrow */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-0 sm:left-4 lg:left-8 z-20 p-3 sm:p-4 rounded-full border-2 border-gray-600 hover:border-orange-500 bg-[#0a1628] hover:bg-gray-800 transition-all duration-300 group"
-          aria-label="Previous dashboard"
-        >
-          <ArrowLeft className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-orange-500 transition-colors" />
-        </button>
+<div ref={carouselRef} className={`relative min-h-[600px] flex items-center overflow-hidden transform transition-all duration-1000 ease-out ${visibleCarousel ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+  {/* Left Arrow */}
+  <button
+    onClick={prevSlide}
+    className="absolute left-4 sm:left-6 lg:left-12 z-20 p-3 rounded-full border-2 transition-all duration-500 hover:scale-110 active:scale-95"
+    aria-label="Previous dashboard"
+    style={{ 
+      top: '50%', 
+      transform: 'translateY(-50%)',
+      backgroundColor: 'rgba(15, 23, 42, 0.8)',
+      borderColor: '#4b5563'
+    }}
+  >
+    <ArrowLeft className="w-6 h-6 text-gray-300" />
+  </button>
 
-        {/* Slide Content */}
-        <div className="w-full px-12 sm:px-20 lg:px-24">
-          <div className="relative">
-            {dashboards.map((dashboard, index) => (
-              <div
-                key={index}
-                className={`grid lg:grid-cols-2 gap-8 lg:gap-12 items-center transition-all duration-700 ease-in-out ${
-                  index === currentSlide
-                    ? 'opacity-100 translate-x-0 scale-100 relative'
-                    : index < currentSlide
-                    ? 'opacity-0 -translate-x-full scale-95 absolute inset-0 pointer-events-none'
-                    : 'opacity-0 translate-x-full scale-95 absolute inset-0 pointer-events-none'
-                }`}
+  {/* Slide Content */}
+<div className="w-full px-16 sm:px-20 lg:px-32">
+  <div className="relative">
+    {dashboards.map((dashboard, index) => (
+      <div
+        key={index}
+        className={`transition-all duration-700 ease-in-out ${
+          index === currentSlide
+            ? 'opacity-100 translate-x-0 scale-100 relative'
+            : index < currentSlide
+            ? 'opacity-0 -translate-x-full scale-95 absolute inset-0 pointer-events-none'
+            : 'opacity-0 translate-x-full scale-95 absolute inset-0 pointer-events-none'
+        }`}
+      >
+        {/* Title - Centered at Top */}
+        <h2 className="text-4xl font-bold text-center mb-10" style={{ color: '#ff5722' }}>
+          {dashboard.title}
+        </h2>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Text Content - Left Side */}
+          <div className="flex flex-col justify-start mt-12">
+            <p className="text-lg leading-relaxed" style={{ 
+              color: '#d1d5db',
+              textAlign: 'justify',
+              textJustify: 'inter-word',
+              lineHeight: '1.8'
+            }}>
+              {dashboard.description}
+            </p>
+          </div>
+
+          {/* Dashboard Image - Right Side */}
+          <div className="flex flex-col">
+            <div className="relative rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src={dashboard.image}
+                alt={dashboard.title}
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/50 to-transparent"></div>
+            </div>
+            
+            {/* More Button - Below Image, Right Aligned */}
+            <div className="pt-4 flex justify-end">
+              <button 
+                className="inline-flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-300 hover:opacity-80"
+                style={{ 
+                  backgroundColor: '#4a5568',
+                  color: '#ffffff'
+                }}
               >
-                {/* Text Content */}
-                <div className="order-2 lg:order-1 space-y-6">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-orange-500">
-                    {dashboard.title}
-                  </h2>
-                  <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                    {dashboard.description}
-                  </p>
-                  <button className="inline-flex items-center space-x-2 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors duration-300 group">
-                    <span>More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
-
-                {/* Dashboard Image */}
-                <div className="order-1 lg:order-2">
-                  <div className="relative rounded-lg overflow-hidden shadow-2xl ring-2 ring-gray-700 hover:ring-orange-500 transition-all duration-300">
-                    <img
-                      src={dashboard.image}
-                      alt={dashboard.title}
-                      className="w-full h-auto object-cover"
-                    />
-                    {/* Overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/50 to-transparent"></div>
-                  </div>
-                </div>
-              </div>
-            ))}
+                <span>More</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Right Arrow */}
-        <button
-          onClick={nextSlide}
-          className="absolute right-0 sm:right-4 lg:right-8 z-20 p-3 sm:p-4 rounded-full border-2 border-gray-600 hover:border-orange-500 bg-[#0a1628] hover:bg-gray-800 transition-all duration-300 group"
-          aria-label="Next dashboard"
-        >
-          <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gray-400 group-hover:text-orange-500 transition-colors" />
-        </button>
       </div>
+    ))}
+  </div>
+</div>
+
+  {/* Right Arrow */}
+  <button
+    onClick={nextSlide}
+    className="absolute right-4 sm:right-6 lg:right-12 z-20 p-3 rounded-full border-2 transition-all duration-300 hover:scale-110 active:scale-95"
+    aria-label="Next dashboard"
+    style={{ 
+      top: '50%', 
+      transform: 'translateY(-50%)',
+      backgroundColor: 'rgba(15, 23, 42, 0.8)',
+      borderColor: '#4b5563'
+    }}
+  >
+    <ArrowRight className="w-6 h-6 text-gray-300" />
+  </button>
+</div>
       
       <Footer />
     </div>

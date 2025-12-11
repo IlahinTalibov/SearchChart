@@ -1,4 +1,4 @@
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Briefcase, TrendingUp, Sprout, Building2, Heart, Users, GraduationCap, BarChart3, Globe, Truck, Laptop, MoreHorizontal } from "lucide-react";
 import { useState } from "react";
 import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import { useTheme } from "../context/ThemeContext";
 
 export const Navbar: React.FC<{ isLogin: boolean }> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPolicyOpen, setIsPolicyOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -23,7 +24,68 @@ export const Navbar: React.FC<{ isLogin: boolean }> = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex items-center gap-6">
-          <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Policy area</Link>
+          <div 
+            className="relative"
+            onMouseEnter={() => setIsPolicyOpen(true)}
+            onMouseLeave={() => setIsPolicyOpen(false)}
+          >
+            <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Policy area</Link>
+            
+            {isPolicyOpen && (
+              <div className="absolute top-full left-0 mt-2 w-64 rounded-lg shadow-xl overflow-hidden" style={{ zIndex: 100, backgroundColor: '#1a2332' }}>
+                <div className="py-1">
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Briefcase className="w-4 h-4" />
+                    <span className="text-sm">Army</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <TrendingUp className="w-4 h-4" />
+                    <span className="text-sm">Economy</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Sprout className="w-4 h-4" />
+                    <span className="text-sm">Agriculture</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Building2 className="w-4 h-4" />
+                    <span className="text-sm">Government</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Heart className="w-4 h-4" />
+                    <span className="text-sm">Health</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Users className="w-4 h-4" />
+                    <span className="text-sm">Social</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <GraduationCap className="w-4 h-4" />
+                    <span className="text-sm">Education</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <BarChart3 className="w-4 h-4" />
+                    <span className="text-sm">Index</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Globe className="w-4 h-4" />
+                    <span className="text-sm">Business</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Truck className="w-4 h-4" />
+                    <span className="text-sm">Transportation</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <Laptop className="w-4 h-4" />
+                    <span className="text-sm">Technology & Innovation</span>
+                  </Link>
+                  <Link to="#" className="flex items-center gap-3 px-4 py-2.5 transition-colors" style={{ color: '#e2e8f0' }}>
+                    <MoreHorizontal className="w-4 h-4" />
+                    <span className="text-sm">Other</span>
+                  </Link>
+                </div>
+              </div>
+            )}
+          </div>
           <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Dashboard</Link>
           <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>Subscription</Link>
           <Link to="#" className="hover:text-gray-400 transition-colors font-semibold" style={{ color: theme === 'light' ? '#000000' : '#FFFFFF' }}>About Us</Link>
