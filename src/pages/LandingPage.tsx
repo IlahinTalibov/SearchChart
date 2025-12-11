@@ -373,7 +373,7 @@ const SearchArtLanding = () => {
 
       {/* Dashboard Carousel Section */}
       {/* Carousel Content */}
-<div ref={carouselRef} className={`relative min-h-[600px] flex items-center overflow-hidden transform transition-all duration-1000 ease-out ${visibleCarousel ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+<div ref={carouselRef} className={`relative min-h-[600px] flex items-center overflow-hidden transform transition-all duration-3000 ease-out ${visibleCarousel ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
   {/* Left Arrow */}
   <button
     onClick={prevSlide}
@@ -395,7 +395,7 @@ const SearchArtLanding = () => {
     {dashboards.map((dashboard, index) => (
       <div
         key={index}
-        className={`transition-all duration-700 ease-in-out ${
+        className={`transition-all duration-5000 ease-in-out ${
           index === currentSlide
             ? 'opacity-100 translate-x-0 scale-100 relative'
             : index < currentSlide
@@ -434,18 +434,18 @@ const SearchArtLanding = () => {
             </div>
             
             {/* More Button - Below Image, Right Aligned */}
-            <div className="pt-4 flex justify-end">
-              <button 
-                className="inline-flex items-center space-x-2 px-6 py-3 rounded-md transition-all duration-300 hover:opacity-80"
-                style={{ 
-                  backgroundColor: '#4a5568',
-                  color: '#ffffff'
-                }}
-              >
-                <span>More</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
+          <div className="pt-4 flex justify-end">
+  <button 
+    className="inline-flex items-center space-x-10 px-30 py-2.5 rounded-md transition-all duration-300 hover:opacity-80 sm:px-12 md:px-14"
+    style={{ 
+      backgroundColor: '#284068',
+      color: '#ffffff',
+    }}
+  >
+    <span className="text-base">More</span>
+    <ArrowRight className="w-5 h-5" />
+  </button>
+</div>
           </div>
         </div>
       </div>
@@ -456,7 +456,7 @@ const SearchArtLanding = () => {
   {/* Right Arrow */}
   <button
     onClick={nextSlide}
-    className="absolute right-4 sm:right-6 lg:right-12 z-20 p-3 rounded-full border-2 transition-all duration-300 hover:scale-110 active:scale-95"
+    className="absolute right-4 sm:right-6 lg:right-12 z-20 p-3 rounded-full border-2 transition-all duration-3000 hover:scale-110 active:scale-95"
     aria-label="Next dashboard"
     style={{ 
       top: '50%', 
